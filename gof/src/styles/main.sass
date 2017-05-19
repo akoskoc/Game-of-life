@@ -1,0 +1,50 @@
+$dark-blue: #26628A
+$light-blue: #6BC5D3
+$light: #e6e6e6
+$dark: #3F404A
+$orange: #F15942
+
+body
+    font-family: "arial"
+    background-color: $light
+    margin: 0
+
+    /* Header */
+    header
+        text-align: center
+        *
+            padding: 0
+            margin: 0
+        ul
+            display: flex
+            justify-content: center
+            height: 40px
+            list-style: none
+            background-color: rgba(#000000, 0.25)
+            box-sizing: border-box
+            li
+                color: $dark
+                width: 100px
+                font-weight: 600
+                line-height: 40px
+                text-align: center
+                transition: background-color 0.3s
+                box-sizing: border-box
+                position: relative
+            li::after
+                position: absolute
+                content: ""
+                background: $dark
+                width: 0px
+                height: 3px
+                left: 0
+                top: 37px
+                transition: 0.3s
+            li:hover::after
+                width: 100%
+            li:hover
+                cursor: pointer
+                background-color: $orange
+    h3
+        text-align: center
+        color: $dark

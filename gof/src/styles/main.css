@@ -1,0 +1,45 @@
+body {
+  font-family: "arial";
+  background-color: #e6e6e6;
+  margin: 0;
+  /* Header */ }
+  body header {
+    text-align: center; }
+    body header * {
+      padding: 0;
+      margin: 0; }
+    body header ul {
+      display: flex;
+      justify-content: center;
+      height: 40px;
+      list-style: none;
+      background-color: rgba(0, 0, 0, 0.25);
+      box-sizing: border-box; }
+      body header ul li {
+        color: #3F404A;
+        width: 100px;
+        font-weight: 600;
+        line-height: 40px;
+        text-align: center;
+        transition: background-color 0.3s;
+        box-sizing: border-box;
+        position: relative; }
+      body header ul li::after {
+        position: absolute;
+        content: "";
+        background: #3F404A;
+        width: 0px;
+        height: 3px;
+        left: 0;
+        top: 37px;
+        transition: 0.3s; }
+      body header ul li:hover::after {
+        width: 100%; }
+      body header ul li:hover {
+        cursor: pointer;
+        background-color: #F15942; }
+  body h3 {
+    text-align: center;
+    color: #3F404A; }
+
+/*# sourceMappingURL=main.css.map */
