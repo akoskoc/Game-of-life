@@ -1,43 +1,55 @@
 body {
   font-family: "arial";
-  background-color: #e6e6e6;
   margin: 0;
-  /* Header */ }
-  body header {
+  /* Controllers */ }
+  body .controllers {
+    margin-top: 30px;
     text-align: center; }
-    body header * {
-      padding: 0;
-      margin: 0; }
-    body header ul {
-      display: flex;
-      justify-content: center;
+    body .controllers button {
+      color: #3F404A;
+      background-color: #dec5b3;
+      font-weight: 600;
+      border: none;
+      margin: 20px;
+      width: 80px;
       height: 40px;
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.25);
+      position: relative; }
+    body .controllers button::after, body .controllers button::before {
+      position: absolute;
+      content: "";
+      height: 0px;
+      width: 0px;
+      top: 0;
+      left: 0;
       box-sizing: border-box; }
-      body header ul li {
-        color: #3F404A;
-        width: 100px;
-        font-weight: 600;
-        line-height: 40px;
-        text-align: center;
-        transition: background-color 0.3s;
-        box-sizing: border-box;
-        position: relative; }
-      body header ul li::after {
-        position: absolute;
-        content: "";
-        background: #3F404A;
-        width: 0px;
-        height: 3px;
-        left: 0;
-        top: 37px;
-        transition: 0.3s; }
-      body header ul li:hover::after {
-        width: 100%; }
-      body header ul li:hover {
-        cursor: pointer;
-        background-color: #F15942; }
+    body .controllers button::after {
+      transition: height 150ms 150ms, width 150ms; }
+    body .controllers button::before {
+      transition: width 150ms 150ms, height 150ms; }
+    body .controllers button:hover::before {
+      height: 100%;
+      width: 100%;
+      border-bottom: 2px solid #77533a;
+      border-left: 2px solid #77533a; }
+    body .controllers button:hover::after {
+      height: 100%;
+      width: 100%;
+      border-top: 2px solid #77533a;
+      border-right: 2px solid #77533a; }
+    body .controllers button:hover {
+      cursor: pointer; }
+    body .controllers button:active {
+      background-color: #c7a891; }
+  body .grid {
+    position: absolute;
+    background-color: transparent;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  body canvas {
+    display: block;
+    border: 1px solid black;
+    margin: 0 auto; }
   body h3 {
     text-align: center;
     color: #3F404A; }

@@ -1,50 +1,66 @@
 $dark-blue: #26628A
 $light-blue: #6BC5D3
-$light: #e6e6e6
+$light: #dec5b3
 $dark: #3F404A
-$orange: #F15942
+$brown: #77533a
 
 body
     font-family: "arial"
-    background-color: $light
     margin: 0
 
-    /* Header */
-    header
+    /* Controllers */
+    .controllers
+        margin-top: 30px
         text-align: center
-        *
-            padding: 0
-            margin: 0
-        ul
-            display: flex
-            justify-content: center
+        button
+            color: $dark
+            background-color: $light
+            font-weight: 600
+            border: none
+            margin: 20px
+            width: 80px
             height: 40px
-            list-style: none
-            background-color: rgba(#000000, 0.25)
+            position: relative
+        button::after, button::before
+            position: absolute
+            content: ""
+            height: 0px
+            width: 0px
+            top: 0
+            left: 0
             box-sizing: border-box
-            li
-                color: $dark
-                width: 100px
-                font-weight: 600
-                line-height: 40px
-                text-align: center
-                transition: background-color 0.3s
-                box-sizing: border-box
-                position: relative
-            li::after
-                position: absolute
-                content: ""
-                background: $dark
-                width: 0px
-                height: 3px
-                left: 0
-                top: 37px
-                transition: 0.3s
-            li:hover::after
-                width: 100%
-            li:hover
-                cursor: pointer
-                background-color: $orange
+        button::after
+            transition: height 150ms 150ms, width 150ms
+        button::before
+            transition: width 150ms 150ms, height 150ms
+        button:hover::before
+            height: 100%
+            width: 100%
+            border-bottom: 2px solid $brown
+            border-left: 2px solid $brown
+        button:hover::after
+            height: 100%
+            width: 100%
+            border-top: 2px solid $brown
+            border-right: 2px solid $brown
+        button:hover
+            cursor: pointer
+        button:active
+            background-color: #c7a891
+
+    .grid
+        position: absolute
+        background-color: transparent
+        top: 170px
+        left: 50%
+        transform: translate(-50%,0)
+
+    canvas
+        display: block
+        border: 1px solid black
+        margin: 0 auto
+
+
     h3
         text-align: center
         color: $dark
