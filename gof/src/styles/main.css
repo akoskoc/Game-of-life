@@ -43,7 +43,7 @@ body {
   body .grid {
     position: absolute;
     background-color: transparent;
-    top: 170px;
+    top: 169px;
     left: 50%;
     transform: translate(-50%, 0); }
   body canvas {
