@@ -9,7 +9,7 @@ export default combineReducers({
 
 function reducer(state = game, action) {
     if(action.payload) {
-        if(action.payload.generation === 10000) {
+        if(action.payload.generation === 4000) {
             console.log(performance.now())
         }
     }

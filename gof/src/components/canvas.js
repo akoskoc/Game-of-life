@@ -47,15 +47,12 @@ class CanvasComponent extends React.Component {
             gameState = this.props.game.gameState,
             i,
             k
-
+        c.clearRect(0, 0, boardX * cellSize, boardY * cellSize)
         for(i = 0; i < gameState.length; i += 1) {
             for(k = 0; k < gameState[i].length; k += 1) {
 
                 if(gameState[i][k] === 1) {
                     c.fillStyle = "#3F404A";
-                    c.fillRect(i * cellSize, k * cellSize, cellSize, cellSize)
-                } else {
-                    c.fillStyle = "#ffffff";
                     c.fillRect(i * cellSize, k * cellSize, cellSize, cellSize)
                 }
             }

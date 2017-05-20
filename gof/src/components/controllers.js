@@ -7,7 +7,7 @@ import { generate } from "./../actions/provideActionCreators"
 
 class Controllers extends React.Component {
     componentDidMount() {
-        //setInterval(() => this.props.generate(this.props.game), 0)
+        setInterval(() => this.props.generate(this.props.game), 10)
 
     }
     componentDidUpdate() {
