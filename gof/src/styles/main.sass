@@ -1,66 +1,98 @@
 $dark-blue: #26628A
 $light-blue: #6BC5D3
 $light: #dec5b3
-$dark: #3F404A
-$brown: #77533a
+$dark: #1c212a
+$green: #1d7a53
+
+*
+    padding: 0
+    margin: 0
+html
+    height: 100%
+    position: relative
 
 body
+    padding-bottom: 55px
+    min-height: calc(100% - 65px)
+    position: relative
     font-family: "arial"
-    margin: 0
-
-    /* Controllers */
-    .controllers
-        margin-top: 30px
-        text-align: center
-        button
-            color: $dark
-            background-color: $light
-            font-weight: 600
-            border: none
-            margin: 20px
-            width: 80px
-            height: 40px
-            position: relative
-        button::after, button::before
-            position: absolute
-            content: ""
-            height: 0px
-            width: 0px
-            top: 0
-            left: 0
-            box-sizing: border-box
-        button::after
-            transition: height 150ms 150ms, width 150ms
-        button::before
-            transition: width 150ms 150ms, height 150ms
-        button:hover::before
-            height: 100%
-            width: 100%
-            border-bottom: 2px solid $brown
-            border-left: 2px solid $brown
-        button:hover::after
-            height: 100%
-            width: 100%
-            border-top: 2px solid $brown
-            border-right: 2px solid $brown
-        button:hover
-            cursor: pointer
-        button:active
-            background-color: #c7a891
-
-    .grid
-        position: absolute
-        background-color: transparent
-        top: 169px
-        left: 50%
-        transform: translate(-50%,0)
-
-    canvas
-        display: block
-        border: 1px solid black
-        margin: 0 auto
-
 
     h3
         text-align: center
         color: $dark
+        user-select: none
+
+    /* Canvas */
+    canvas
+        background-color: black
+        display: block
+        margin: 0 auto 50px auto
+
+    /* Controllers */
+    #dropdown
+        overflow: hidden
+
+    #controllers
+        margin: 30px 0px
+        text-align: center
+        li
+            display: inline
+            button
+                border: none
+                color: white
+                background-color: $dark
+                margin: 0 5px
+                width: 120px
+                height: 25px
+                &:active
+                    transition: 300ms
+                    color: $dark
+                    background-color: white
+                &:hover
+                    cursor: pointer
+
+        .parentButton
+            border: 1px solid $dark
+
+
+        /* Animations */
+        .dropDownParent
+            position: relative
+
+            .buttonContainer
+                transition: height 200ms
+                position: absolute
+                overflow: hidden
+                top: 25px
+                left: 0px
+
+                button
+                    box-sizing: border-box
+                    border-bottom: 1px solid black
+    /* Footer */
+    footer
+        padding: 10px 0px
+        color: white
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 50px
+        background-color: $dark
+        text-align: center
+        p
+            padding: 5px 0px
+            a
+                text-decoration: none
+                color: $green
+
+
+@media screen and (max-width: 700px)
+    #controllers
+        .parentButton
+            margin: 5px 0px
+
+        margin: 10px !important
+        li
+            display: block !important
+        .buttonContainer
+            position: static !important
