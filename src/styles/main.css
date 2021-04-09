@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  padding-bottom: 55px;
+  min-height: calc(100% - 65px);
+  position: relative;
+  font-family: "arial";
+  /* Canvas */
+  /* Controllers */
+}
+body h3 {
+  text-align: center;
+  color: #1c212a;
+  user-select: none;
+}
+body canvas {
+  background-color: black;
+  display: block;
+  margin: 0 auto 50px auto;
+}
+body #dropdown {
+  overflow: hidden;
+}
+body #controllers {
+  margin: 30px 0px;
+  text-align: center;
+  /* Animations */
+}
+body #controllers li {
+  display: inline;
+}
+body #controllers li button {
+  border: none;
+  color: white;
+  background-color: #1c212a;
+  margin: 0 5px;
+  width: 120px;
+  height: 25px;
+}
+body #controllers li button:active {
+  transition: 300ms;
+  color: #1c212a;
+  background-color: white;
+}
+body #controllers li button:hover {
+  cursor: pointer;
+}
+body #controllers .parentButton {
+  border: 1px solid #1c212a;
+}
+body #controllers .dropDownParent {
+  position: relative;
+}
+body #controllers .dropDownParent .buttonContainer {
+  transition: height 200ms;
+  position: absolute;
+  overflow: hidden;
+  top: 25px;
+  left: 0px;
+}
+body #controllers .dropDownParent .buttonContainer button {
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 700px) {
+  #controllers {
+    margin: 10px !important;
+  }
+  #controllers .parentButton {
+    margin: 5px 0px;
+  }
+  #controllers li {
+    display: block !important;
+  }
+  #controllers .buttonContainer {
+    position: static !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,1 @@
-# Game-of-life
-Freecodecamp challenge
-
-https://absolitudo.github.io/Game-of-life/
+https://akoskoc.github.io/Game-of-life/
